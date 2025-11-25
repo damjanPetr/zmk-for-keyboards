@@ -15,6 +15,13 @@
 #define RAISE 2
 #define ADJUST 3
 
+&lt { quick-tap-ms = <200>; };
+
+&mt {
+    flavor = "tap-preferred";
+    quick-tap-ms = <200>;
+};
+
 / {
     // Activate ADJUST layer by pressing raise and lower
 
@@ -38,7 +45,7 @@
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
-                bindings = <
+            bindings = <
 &kp GRAVE      &kp N1         &kp N2       &kp N3            &kp N4        &kp N5                                               &kp N6           &kp N7   &kp N8            &kp N9         &kp N0  &kp EQUAL
 &kp BACKSLASH  &kp SQT        &kp COMMA    &kp PERIOD        &kp P         &kp Y                                                &kp F            &kp G    &kp C             &kp R          &kp L   &kp SLASH
 &kp DELETE     &kp A          &kp O        &kp E             &kp U         &kp I                                                &kp D            &kp H    &kp T             &kp N          &kp S   &kp MINUS
@@ -77,7 +84,7 @@
             // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
-                        bindings = <
+            bindings = <
 &trans  &trans  &trans    &trans             &trans          &trans                    &trans  &trans        &trans         &trans   &trans  &mo 3
 &trans  &trans  &trans    &kp LC(BACKSPACE)  &kp LC(DELETE)  &trans                    &trans  &kp LC(LEFT)  &kp LC(RIGHT)  &trans   &trans  &trans
 &trans  &trans  &kp HOME  &kp UP_ARROW       &kp DOWN        &trans                    &trans  &kp LEFT      &kp RIGHT      &kp END  &trans  &trans
